@@ -193,4 +193,4 @@ App.prototype.myAddEvent = founction(obj, event0, func) {
     }
 
     App.PagesSelectorModel = PagesSelectorModel
-})(window.PageSelf);
+})(window.App);
