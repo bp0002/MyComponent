@@ -1,3 +1,15 @@
+var App = {};
+App.prototype.myAddEvent = founction(obj, event0, func) {
+		if (obj.attachEvent) {
+			obj.attachEvent("on" + event0, func);
+			return true;
+		}else if(obj.addEventListener){
+			obj.addEventListener(event0, func, false);
+			return true;
+		}else{
+			return false;
+		};
+};
 (function(App){
     /**
      * 分页选择器
@@ -6,7 +18,6 @@
      * @param {*} pagesNum  Number of total pages.
      */
     function PagesSelectorModel(container, pagesNum, startIndex){
-        App.pageLoadManage.myLoad_css("../page/pagesSelectorModel.css");
 
         this.parenteDIV = container;
         this.container = document.createElement("div");
